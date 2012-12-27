@@ -3,7 +3,7 @@
  * Plugin Name: Jane's Related Posts
  * Plugin URI: http://romantelychko.com/downloads/wordpress/plugins/janes-related-posts.latest.zip
  * Description: A related posts plugin.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Roman Telychko
  * Author URI: http://romantelychko.com
  */
@@ -396,7 +396,10 @@ class Janes_Related_Posts
             }
                     
             if( !empty($related_posts) )
-            {                
+            {            
+                $i = 1;
+                $i_max = count($related_posts);
+                
 	            foreach( $related_posts as $post )
 	            {	    
 	                $post_author_obj = get_userdata( $post->post_author );
@@ -487,8 +490,21 @@ class Janes_Related_Posts
                             $temp_html = str_ireplace( $matches['1'], get_the_excerpt(), $temp_html );
                         }            
                     }
-	            
-	                $related_posts_html .= '<li>'.$temp_html.'</li>';
+
+	                $related_posts_html .= '<li';
+
+	                if( $i==1 )
+	                {
+	                    $related_posts_html .= ' class="first"';	                
+	                }
+	                elseif( $i>=$i_max )
+	                {
+	                    $related_posts_html .= ' class="last"';
+	                }
+	                
+	                $related_posts_html .= '>'.$temp_html.'</li>';
+	                
+	                $i++;
 	            }
             
                 $output .=  
