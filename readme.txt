@@ -3,15 +3,15 @@ Contributors: kutsy
 Tags: post, posts, widget, related, same posts, plugin, admin, page, links
 Requires at least: 3.0
 Tested up to: 3.5
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Related posts widget (after content block).
+Related posts plugin (after content block).
 
 == Description ==
 
-Related posts widget (after content block).
+Related posts plugin (after content block).
 
 Named as "Jane's", because at first used on my wife's blog - [Jane Bezmaternykh](http://janebezmaternykh.com/ "Jane Bezmaternykh : Тайм-менеджмент молодой мамы и просто домохозяйки. Самомотивация и личное развитие.").
 
@@ -28,6 +28,9 @@ You can fully customize displaying of widget by using predefined placeholders, s
 1. "Jane's Related Posts" setting
 
 == Changelog ==
+
+= 0.1.2 =
+* Fix some bugs
 
 = 0.1.1 =
 * Added classes `first` and `last` for first and last `<li>`-items
