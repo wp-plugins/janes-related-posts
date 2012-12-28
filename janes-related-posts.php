@@ -3,7 +3,7 @@
  * Plugin Name: Jane's Related Posts
  * Plugin URI: http://romantelychko.com/downloads/wordpress/plugins/janes-related-posts.latest.zip
  * Description: Related posts plugin (after content block).
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: Roman Telychko
  * Author URI: http://romantelychko.com
  */
@@ -524,7 +524,7 @@ class Janes_Related_Posts
         }
         
 	    // restore $post (Wordpress bug fixing)
-	    #wp_reset_postdata();
+	    wp_reset_postdata();
 	    $post = $tmp_post;
 	    
 	    #echo( '] time: '.( microtime(true)-$start_time ) * 1000 . ' ms' );
